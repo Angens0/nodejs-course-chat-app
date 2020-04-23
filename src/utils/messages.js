@@ -1,9 +1,11 @@
-const generateMessage = text => ({
+const generateMessage = (username, text) => ({
+    username,
     text,
     createdAt: new Date().getTime()
 })
 
-const generateLocationMessage = ({ latitude, longitude }) => ({
+const generateLocationMessage = (username, { latitude, longitude }) => ({
+    username,
     url: `https://google.com/maps?q=${latitude},${longitude}`,
     createdAt: new Date().getTime()
 })
